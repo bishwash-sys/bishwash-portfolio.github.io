@@ -124,26 +124,41 @@ div{
 .fire:hover{
     transform: translate(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+} /* <-- This closing brace was missing in your original code! */
+
+/* Tablet & Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-            body {
-                padding: 15px; /* Reduces heavy padding on mobile screens */
-                border-width: 3px;
-            }
-            .navbar {
-                flex-wrap: wrap; /* Allows buttons to wrap safely if needed */
-                gap: 10px;
-            }
-            .portfolio-container {
-                flex-direction: column; /* Stacks skills columns vertically */
-                gap: 20px;
-            }
-            .fire {
-                flex-direction: column; /* Stacks social icons vertically */
-                gap: 20px;
-            }
-            .column h2 {
-                font-size: 1.1rem;
-            }
+    body {
+        padding: 15px; /* Reduces heavy padding on mobile screens */
+        border-width: 3px;
+    }
+    
+    .navbar {
+        flex-direction: column; /* Stacks navigation buttons vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar .btn {
+        width: 80%; /* Makes buttons easier to tap on mobile */
+    }
+
+    .portfolio-container {
+        flex-direction: column; /* Stacks your skills columns vertically */
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .fire {
+        flex-direction: column; /* Stacks social icons vertically */
+        gap: 20px;
+    }
+
+    .column h2 {
+        font-size: 1.1rem;
+    }
+}
+    
 </style>
     </head>
     <body>
